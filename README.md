@@ -79,3 +79,4 @@ python manage.py runserver
 
 GET запити — публічні, доступні без токена.
 Решта (POST, PUT, PATCH, DELETE) — потребують JWT токена у заголовку:
+`Authorization: Bearer <access_token>`
