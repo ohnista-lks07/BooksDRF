@@ -2,7 +2,6 @@
 
 REST API для бібліотеки з JWT-аутентифікацією.
 Зроблено на Django + DRF + SimpleJWT.
-
 GitHub: https://github.com/ohnista-lks07/BooksDRF
 
 ## Технології
@@ -79,3 +78,12 @@ python manage.py runserver
 
 GET запити — публічні, доступні без токена.
 Решта (POST, PUT, PATCH, DELETE) — потребують JWT токена у заголовку:
+
+## Запуск через Docker
+
+1. `git clone ...`
+2. `cp .env.example .env`
+3. `docker-compose up --build`
+4. `docker-compose exec web python manage.py migrate`
+5. `docker-compose exec web python manage.py createsuperuser`
+6. Відкрий http://localhost:8000/admin
