@@ -78,8 +78,7 @@ python manage.py runserver
 
 GET запити — публічні, доступні без токена.
 Решта (POST, PUT, PATCH, DELETE) — потребують JWT токена у заголовку:
-feature/dockerize
-
+`Authorization: Bearer <access_token>`
 ## Запуск через Docker
 
 1. `git clone ...`
@@ -88,6 +87,3 @@ feature/dockerize
 4. `docker-compose exec web python manage.py migrate`
 5. `docker-compose exec web python manage.py createsuperuser`
 6. Відкрий http://localhost:8000/admin
-
-`Authorization: Bearer <access_token>`
-main
